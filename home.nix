@@ -11,6 +11,7 @@ let
     rofi = "rofi";
     alacritty = "alacritty";
     eza = "eza";
+    tmux = "tmux";
     # picom = "picom";
   };
 in
