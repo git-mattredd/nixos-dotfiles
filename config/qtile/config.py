@@ -210,14 +210,14 @@ screens = [
                     padding = 8,
                     max_chars = 40
                 ),
-                widget.GenPollText(
-                    update_interval = 300,
-                    func = lambda: subprocess.check_output("printf $(uname -r)", shell=True, text=True),
-                    foreground = colors[3],
-                    padding = 8, 
-                    fmt = '{}',
-                ),
-                sep,
+                # widget.GenPollText(
+                #     update_interval = 300,
+                #     func = lambda: subprocess.check_output("printf $(uname -r)", shell=True, text=True),
+                #     foreground = colors[3],
+                #     padding = 8, 
+                #     fmt = '{}',
+                # ),
+                # sep,
                 widget.CPU(
                     foreground = colors[4],
                     padding = 8, 
@@ -259,12 +259,12 @@ screens = [
                 #         'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e upower -i $(upower -e | grep BAT)'),
                 #     },
                 # ),
-                sep,
-                widget.Volume(
-                    foreground = colors[7],
-                    padding = 8, 
-                    fmt = 'Vol: {}',
-                ),
+                # sep,
+                # widget.Volume(
+                #     foreground = colors[7],
+                #     padding = 8, 
+                #     fmt = 'Vol: {}',
+                # ),
                 sep,
                 widget.Clock(
                     foreground = colors[8],
@@ -340,14 +340,14 @@ screens = [
                     padding = 8,
                     max_chars = 40
                 ),
-                widget.GenPollText(
-                    update_interval = 300,
-                    func = lambda: subprocess.check_output("printf $(uname -r)", shell=True, text=True),
-                    foreground = colors[3],
-                    padding = 8, 
-                    fmt = '{}',
-                ),
-                sep,
+                # widget.GenPollText(
+                #     update_interval = 300,
+                #     func = lambda: subprocess.check_output("printf $(uname -r)", shell=True, text=True),
+                #     foreground = colors[3],
+                #     padding = 8, 
+                #     fmt = '{}',
+                # ),
+                # sep,
                 widget.CPU(
                     foreground = colors[4],
                     padding = 8, 
@@ -362,17 +362,17 @@ screens = [
                     format = 'Mem: {MemUsed:.0f}{mm}',
                 ),
                 sep,
-                widget.DF(
-                    update_interval = 60,
-                    foreground = colors[5],
-                    padding = 8, 
-                    mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn('notify-disk')},
-                    partition = '/',
-                    #format = '[{p}] {uf}{m} ({r:.0f}%)',
-                    format = '{uf}{m} free',
-                    fmt = 'Disk: {}',
-                    visible_on_warn = False,
-                ),
+                # widget.DF(
+                #     update_interval = 60,
+                #     foreground = colors[5],
+                #     padding = 8, 
+                #     mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn('notify-disk')},
+                #     partition = '/',
+                #     #format = '[{p}] {uf}{m} ({r:.0f}%)',
+                #     format = '{uf}{m} free',
+                #     fmt = 'Disk: {}',
+                #     visible_on_warn = False,
+                # ),
                 # sep,
                 # widget.Battery(
                 #     foreground=colors[6],           # pick a palette slot you like
@@ -389,13 +389,13 @@ screens = [
                 #         'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e upower -i $(upower -e | grep BAT)'),
                 #     },
                 # ),
-                sep,
-                widget.Volume(
-                    foreground = colors[7],
-                    padding = 8, 
-                    fmt = 'Vol: {}',
-                ),
-                sep,
+                # sep,
+                # widget.Volume(
+                #     foreground = colors[7],
+                #     padding = 8, 
+                #     fmt = 'Vol: {}',
+                # ),
+                # sep,
                 widget.Clock(
                     foreground = colors[8],
                     padding = 8, 
