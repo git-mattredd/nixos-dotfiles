@@ -22,7 +22,6 @@
     enable = true;
     autoRepeatDelay = 200;
     autoRepeatInterval = 35;
-    xkb.options = "caps.swapescape";
     windowManager.qtile.enable = true;
     videoDrivers = [ "nvidia" ];
   };

@@ -57,7 +57,6 @@ in
       package = pkgs.papirus-icon-theme;
     };
   };
-
   programs.git = {
     enable = true;
     userName = "Matt Redd";
