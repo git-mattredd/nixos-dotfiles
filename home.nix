@@ -11,8 +11,8 @@ let
     rofi = "rofi";
     alacritty = "alacritty";
     eza = "eza";
-    tmux = "tmux";
     # picom = "picom";
+    # moved tmux
   };
 in
 {
@@ -35,6 +35,9 @@ in
   # home.file.".config/qtile".source = ./config/qtile;
   # home.file.".config/nvim".source = ./config/nvim;
   # home.file.".config/alacritty".source = ./config/alacritty;
+  home.file.".tmux.conf".source = ./config/tmux/tmux.conf;
+  home.file.".tmux/plugins".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.tmux/plugins";
+
   xdg.configFile = builtins.mapAttrs
     (name: subpath: {
       source = create_symlink "${dotfiles}/${subpath}";
