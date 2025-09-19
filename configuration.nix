@@ -28,11 +28,8 @@
   hardware.nvidia.open = false;
   services.displayManager.ly.enable = true;
 
-
-
   # Configure keymap in X11 services.xserver.xkb.layout = "us";
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
-
 
   # services.pulseaudio.enable = true;
   # OR
@@ -63,6 +60,7 @@
     neovim
     gcc
     xclip
+    dconf
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono

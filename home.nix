@@ -45,6 +45,18 @@ in
     ./modules/neovim.nix
   ];
 
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Tokyonight-dark";
+      package = pkgs.tokyonight-gtk-theme;
+    };
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
+  };
+
   programs.git = {
     enable = true;
     userName = "Matt Redd";
