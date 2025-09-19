@@ -13,7 +13,6 @@ let
     eza = "eza";
     # picom = "picom";
     # moved tmux
-    tmux = "tmux";
   };
 in
 {
@@ -37,7 +36,6 @@ in
   # home.file.".config/nvim".source = ./config/nvim;
   # home.file.".config/alacritty".source = ./config/alacritty;
 
-  home.file.".tmux".source = ./config/.tmux;
   xdg.configFile = builtins.mapAttrs
     (name: subpath: {
       source = create_symlink "${dotfiles}/${subpath}";
@@ -48,7 +46,17 @@ in
   imports = [
     ./modules/neovim.nix
   ];
-
+  programs.tmux = {
+    enable = true;
+    extraConfig = ''      
+    set -g prefix C-s
+    set -g mouse on
+    bind-key h select-pane -L
+    bind-key j select-pane -D
+    bind-key k select-pane -U
+    bind-key l select-pane -R
+  '';
+  };
   gtk = {
     enable = true;
     theme = {
@@ -73,7 +81,7 @@ in
       eza
       xwallpaper
       cava
-      tmux
+      # tmux
       cmatrix
       termusic
       mdcat
