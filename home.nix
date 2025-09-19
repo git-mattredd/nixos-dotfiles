@@ -61,6 +61,7 @@ in
       tmux
       cmatrix
       termusic
+      mdcat
     ];
 }
 
