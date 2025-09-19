@@ -62,6 +62,7 @@ in
       cmatrix
       termusic
       mdcat
+      pavucontrol
     ];
 }
 
