@@ -48,8 +48,8 @@ in
   gtk = {
     enable = true;
     theme = {
-      name = "Tokyonight-dark";
-      package = pkgs.tokyonight-gtk-theme;
+      name = "Adwaita-dark";
+      package = pkgs.gnome-themes-extra;
     };
     iconTheme = {
       name = "Papirus-Dark";
