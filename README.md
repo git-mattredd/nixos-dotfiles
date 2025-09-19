@@ -1,4 +1,4 @@
-#NixOS Dotfiles
+# NixOS Dotfiles
 + taken off of @tonybanters
 + mostly proprietary
 + must be named Matt to use
