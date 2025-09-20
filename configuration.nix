@@ -24,6 +24,12 @@
     autoRepeatInterval = 35;
     windowManager.qtile.enable = true;
     videoDrivers = [ "nvidia" ];
+    windowManager.dwm = {
+      enable = true;
+      package = pkgs.dwm.overrideAttrs {
+        src = ./config/dwm;
+      };
+    };
   };
   hardware.nvidia.open = false;
   services.displayManager.ly.enable = true;
