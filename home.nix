@@ -11,6 +11,7 @@ let
     rofi = "rofi";
     alacritty = "alacritty";
     eza = "eza";
+    fastfetch = "fastfetch";
     # picom = "picom";
     # moved tmux
   };
@@ -45,18 +46,8 @@ in
 
   imports = [
     ./modules/neovim.nix
+    ./modules/tmux.nix
   ];
-  programs.tmux = {
-    enable = true;
-    extraConfig = ''      
-    set -g prefix C-s
-    set -g mouse on
-    bind-key h select-pane -L
-    bind-key j select-pane -D
-    bind-key k select-pane -U
-    bind-key l select-pane -R
-  '';
-  };
   gtk = {
     enable = true;
     theme = {
